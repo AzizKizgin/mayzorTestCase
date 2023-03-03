@@ -5,7 +5,6 @@ import {SCREEN_HEIGHT} from '../utils/consts';
 import LoginFormTop from '../components/molecules/LoginFormTop';
 import RegisterForm from '../components/molecules/RegisterForm';
 import LoginForm from '../components/organisms/LoginForm';
-import {ScrollView} from 'react-native-gesture-handler';
 
 const LoginScreen = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -18,7 +17,7 @@ const LoginScreen = () => {
         backgroundColor={'white'}
         borderRadius={'lg'}>
         <LoginFormTop isLogin={isLogin} setIsLogin={setIsLogin} />
-        <LoginForm />
+        {isLogin ? <LoginForm /> : <RegisterForm />}
       </Box>
     </Box>
   );
