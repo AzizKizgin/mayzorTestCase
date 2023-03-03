@@ -8,8 +8,15 @@ interface ButtonProps {
 }
 const LoginButton = () => {
   return (
-    <Pressable>
-      <Text>Button</Text>
+    <Pressable
+      backgroundColor={'orange'}
+      width={'100%'}
+      paddingY={'m'}
+      alignItems={'center'}
+      borderRadius={'sm'}>
+      <Text color={'white'} fontSize={'15'}>
+        Şimdi Giriş Yap
+      </Text>
     </Pressable>
   );
 };
