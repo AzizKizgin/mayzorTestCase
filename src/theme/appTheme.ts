@@ -12,6 +12,7 @@ const colors = {
   textColor: '#191d26',
   darkRed: '#581B20',
   darkPurple: '#5B0486',
+  darkOrange: '#EF8D00',
 };
 
 const appTheme = extendTheme({
@@ -26,6 +27,8 @@ const appTheme = extendTheme({
     navyBlue: colors.navyBlue,
     background: colors.background,
     textColor: colors.textColor,
+    darkRed: colors.darkRed,
+    darkOrange: colors.darkOrange,
   },
 
   space: {
