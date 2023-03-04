@@ -1,8 +1,9 @@
 import React from 'react';
-import {Box, FlatList, ScrollView, Text} from 'native-base';
+import {Box, FlatList} from 'native-base';
 import Header from '../components/molecules/Header';
 import TodaysDiscountsInfo from '../components/molecules/TodaysDiscountsInfo';
 import ProductItem from '../components/organisms/ProductItem';
+import ListFooter from '../components/organisms/ListFooter';
 
 const HomeScreen = () => {
   return (
@@ -11,8 +12,9 @@ const HomeScreen = () => {
       <FlatList
         padding={'l'}
         data={[1, 2, 3, 4, 5]}
-        renderItem={() => <ProductItem />}
+        renderItem={({index}) => <ProductItem key={index.toString()} />}
         ListHeaderComponent={<TodaysDiscountsInfo />}
+        ListFooterComponent={<ListFooter key={'listFooter'} />}
       />
     </Box>
   );
