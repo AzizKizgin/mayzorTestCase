@@ -14,8 +14,12 @@ const Time: FC<TimeProps> = (props) => {
       padding={'xs'}
       borderRadius={'xs'}
       justifyContent={'center'}>
-      <Text marginY={-1}>{time}</Text>
-      <Text marginY={-1}>{unit}</Text>
+      <Text marginY={-1} color={'white'}>
+        {time}
+      </Text>
+      <Text marginY={-1} color={'white'}>
+        {unit}
+      </Text>
     </Box>
   );
 };
