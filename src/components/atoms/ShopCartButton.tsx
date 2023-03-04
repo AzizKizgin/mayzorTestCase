@@ -24,7 +24,6 @@ const ShopCartButton: FC<ShopCartButtonProps> = (props) => {
               tintColor={'white'}
             />
           }
-          name={'shopping-basket'}
           size={23}
           color={'white'}
         />
