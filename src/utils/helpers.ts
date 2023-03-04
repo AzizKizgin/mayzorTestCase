@@ -18,7 +18,7 @@ export const login = async ({
     return false;
   } else if (email === 'emre@mayzor.net' && password === 'mayzor') {
     showToast({
-      message: 'Giriş Başarılı',
+      message: 'Hoşgeldiniz',
       type: 'success',
       duration: 3000,
     });
