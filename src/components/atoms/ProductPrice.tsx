@@ -1,7 +1,9 @@
 import React from 'react';
 import {Box, Text} from 'native-base';
+import {useProduct} from '../../context/ProductContext';
 
 const ProductPrice = () => {
+  const {product} = useProduct();
   return (
     <Box
       flexDirection={'row'}
@@ -12,10 +14,10 @@ const ProductPrice = () => {
         textDecorationLine={'line-through'}
         fontSize={'2xs'}
         color={'lightGray'}>
-        4.499.99 TL
+        {product.oldPrice} TL
       </Text>
       <Text marginLeft={'xs'} color={'orange'} bold>
-        2.277,77 TL
+        {product.newPrice} TL
       </Text>
     </Box>
   );

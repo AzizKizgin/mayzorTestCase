@@ -5,5 +5,25 @@ type AppNavigationParams = {
 
 type HomeNavigationParams = {
   Home: undefined;
-  Details: {id: string};
+  Details: {id: number};
+};
+
+type ProductReview = {
+  id: number;
+  name: string;
+  rate: string;
+  comment: string;
+};
+
+type Product = {
+  id: number;
+  name: string;
+  image: string;
+  oldPrice: number;
+  newPrice: number;
+  discount: number;
+  rate: string;
+  rateCount: number;
+  description: string;
+  reviews: ProductReview[];
 };

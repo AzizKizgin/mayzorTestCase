@@ -1,33 +1,30 @@
 import React, {FC} from 'react';
 import {Box, Center, Image, Text} from 'native-base';
+import {useProduct} from '../../context/ProductContext';
 
-interface ProductImageProps {
-  name: string;
-  size: number;
-  discount?: number;
-}
-const ProductImage: FC<ProductImageProps> = (props) => {
-  const {name, size, discount} = props;
+const ProductImage = () => {
+  const {product} = useProduct();
   return (
     <Center alignItems="center" justifyContent="center">
       <Image
-        source={require('../../assets/slazenger.png')}
+        source={{
+          uri: product.image,
+        }}
         alt="Slazenger"
         resizeMode="cover"
-        size={size}
+        size={150}
+        defaultSource={require('../../assets/default.png')}
       />
-      {discount && (
-        <Box
-          position="absolute"
-          top={0}
-          left={0}
-          backgroundColor={'purple'}
-          borderBottomRightRadius={'md'}>
-          <Text color="white" paddingX={'s'} paddingY={'xxs'}>
-            {'%' + discount}
-          </Text>
-        </Box>
-      )}
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        backgroundColor={'purple'}
+        borderBottomRightRadius={'md'}>
+        <Text color="white" paddingX={'s'} paddingY={'xxs'}>
+          {'%' + product.discount}
+        </Text>
+      </Box>
     </Center>
   );
 };
