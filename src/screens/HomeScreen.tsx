@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box, FlatList, ScrollView, Text} from 'native-base';
 import Header from '../components/molecules/Header';
-import TodaysDealInfo from '../components/molecules/TodaysDealInfo';
+import TodaysDiscountsInfo from '../components/molecules/TodaysDiscountsInfo';
 import ProductItem from '../components/organisms/ProductItem';
 
 const HomeScreen = () => {
@@ -12,7 +12,7 @@ const HomeScreen = () => {
         padding={'l'}
         data={[1, 2, 3, 4, 5]}
         renderItem={() => <ProductItem />}
-        ListHeaderComponent={<TodaysDealInfo />}
+        ListHeaderComponent={<TodaysDiscountsInfo />}
       />
     </Box>
   );

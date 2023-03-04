@@ -1,13 +1,13 @@
 import React from 'react';
 import {Box, Icon, Image} from 'native-base';
 
-const TodaysDealIcon = () => {
+const TodaysDiscountsIcon = () => {
   return (
     <Icon
       as={
         <Image
           source={require('../../assets/shop.png')}
-          alt={'todaysDeal'}
+          alt={'todaysDiscounts'}
           tintColor={'purple'}
         />
       }
@@ -16,4 +16,4 @@ const TodaysDealIcon = () => {
   );
 };
 
-export default TodaysDealIcon;
+export default TodaysDiscountsIcon;

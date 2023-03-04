@@ -1,8 +1,8 @@
 import React from 'react';
 import {Box, Text} from 'native-base';
-import TodaysDealIcon from '../atoms/TodaysDealIcon';
+import TodaysDiscountsIcon from '../atoms/TodaysDiscountsIcon';
 
-const TodaysDealInfo = () => {
+const TodaysDiscountsInfo = () => {
   return (
     <Box
       background={'white'}
@@ -12,7 +12,7 @@ const TodaysDealInfo = () => {
       flexDirection={'row'}
       alignItems={'center'}
       justifyContent={'center'}>
-      <TodaysDealIcon />
+      <TodaysDiscountsIcon />
       <Box marginLeft={'s'}>
         <Text fontSize={'sm'} color={'black'} bold>
           Bugünün 5 Fırsatı
@@ -25,4 +25,4 @@ const TodaysDealInfo = () => {
   );
 };
 
-export default TodaysDealInfo;
+export default TodaysDiscountsInfo;
