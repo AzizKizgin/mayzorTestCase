@@ -42,6 +42,16 @@ const appTheme = extendTheme({
     xxl: 48,
     xxxl: 64,
   },
+
+  components: {
+    Pressable: {
+      baseStyle: {
+        _pressed: {
+          opacity: 0.5,
+        },
+      },
+    },
+  },
 });
 
 type CustomThemeType = typeof appTheme;
