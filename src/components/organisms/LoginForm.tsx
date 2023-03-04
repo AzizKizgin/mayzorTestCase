@@ -2,32 +2,19 @@ import React, {useState} from 'react';
 import {Box, Text, VStack} from 'native-base';
 import LoginInputs from '../molecules/LoginInputs';
 import LoginButton from '../atoms/LoginButton';
-import {login} from '../../utils/helpers';
-import {useToast} from 'rn-toast-message';
-import {NavigationProp, useNavigation} from '@react-navigation/native';
-
+import {useAuth} from '../../context/AuthContext';
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isPressed, setIsPressed] = useState(false);
-  const {showToast} = useToast();
-  const navigation = useNavigation<NavigationProp<AppNavigationParams>>();
-
+  const {login} = useAuth();
   const onPress = () => {
     setIsPressed(true);
     login({
       email,
       password,
-      showToast,
-    }).then((res) => {
+    }).then(() => {
       setIsPressed(false);
-      if (res) {
-        navigation.navigate('Home');
-        navigation.reset({
-          index: 0,
-          routes: [{name: 'Home'}],
-        });
-      }
     });
   };
 
