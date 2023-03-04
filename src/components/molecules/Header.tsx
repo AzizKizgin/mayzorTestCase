@@ -7,8 +7,7 @@ const Header = () => {
   return (
     <HStack
       backgroundColor={'purple'}
-      paddingY={'l'}
-      paddingX={'l'}
+      padding={'l'}
       alignItems={'center'}
       justifyContent={'space-around'}>
       <AccountButton />
