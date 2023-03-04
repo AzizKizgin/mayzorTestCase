@@ -9,7 +9,7 @@ const ProductTime = () => {
       flexDirection={'row'}
       alignItems={'center'}
       justifyContent={'center'}>
-      <Box>
+      <Box marginRight={'xs'}>
         <Text color={'white'}>Kalan</Text>
         <Text color={'white'}>Süre</Text>
       </Box>
