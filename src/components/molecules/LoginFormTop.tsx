@@ -32,7 +32,7 @@ const LoginFormTop: FC<Props> = (props) => {
   };
 
   return (
-    <Box paddingX={'s'}>
+    <Box paddingX={'s'} marginBottom={'m'}>
       <HStack
         justifyContent={'space-evenly'}
         alignItems={'center'}
