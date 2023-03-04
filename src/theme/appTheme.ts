@@ -11,11 +11,13 @@ const colors = {
   background: '#f5f6fb',
   textColor: '#191d26',
   darkRed: '#581B20',
+  darkPurple: '#5B0486',
 };
 
 const appTheme = extendTheme({
   colors: {
     purple: colors.purple,
+    darkPurple: colors.darkPurple,
     orange: colors.orange,
     black: colors.black,
     cream: colors.cream,
