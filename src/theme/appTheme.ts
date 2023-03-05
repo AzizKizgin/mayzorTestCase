@@ -47,7 +47,17 @@ const appTheme = extendTheme({
     Pressable: {
       baseStyle: {
         _pressed: {
-          opacity: 0.5,
+          opacity: 0.8,
+        },
+      },
+    },
+    Box: {
+      variants: {
+        detail: {
+          backgroundColor: 'white',
+          padding: 'm',
+          borderBottomWidth: 0.75,
+          borderColor: 'gray.200',
         },
       },
     },
