@@ -6,17 +6,25 @@ interface IconButtonProps {
   iconName: string;
   iconSize?: number;
   iconColor?: string;
+  onPress?: () => void;
 }
 const IconButton: FC<IconButtonProps> = (props) => {
-  const {iconName, iconSize = 21, iconColor = 'lightGray'} = props;
+  const {iconName, iconSize = 21, iconColor = 'darkGray', onPress} = props;
   return (
-    <Pressable padding={'xs'} borderRadius={'full'} backgroundColor={'white'}>
-      <Icon
-        as={MaterialCommunityIcons}
-        name={iconName}
-        size={iconSize}
-        color={iconColor}
-      />
+    <Pressable onPress={onPress}>
+      <Box
+        padding={'s'}
+        rounded={'full'}
+        backgroundColor={'white'}
+        justifyContent={'center'}
+        alignItems={'center'}>
+        <Icon
+          as={MaterialCommunityIcons}
+          name={iconName}
+          size={iconSize}
+          color={iconColor}
+        />
+      </Box>
     </Pressable>
   );
 };
