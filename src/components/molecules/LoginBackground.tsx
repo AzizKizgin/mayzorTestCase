@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Text} from 'native-base';
 import {SCREEN_HEIGHT} from '../../utils/consts';
+import {strings} from '../../utils/strings';
 
 const LoginBackground = () => {
   return (
@@ -14,7 +15,7 @@ const LoginBackground = () => {
       alignItems={'center'}
       justifyContent={'center'}>
       <Text fontSize={30} fontWeight={'bold'} color={'white'}>
-        MAYZOR TEST CASE
+        {strings.appName}
       </Text>
     </Box>
   );

@@ -1,0 +1,17 @@
+export const strings = {
+  mayzorPrice: 'Mayzor Fiyatı',
+  marketPrice: 'Piyasa Fiyatı',
+  seeAll: 'Tümünü Gör',
+  signIn: 'Şimdi Giriş Yap',
+  superPrice: 'Süper Fiyat',
+  addToCart: 'Sepete Ekle',
+  discountTime: 'Fırsat Süresi',
+  color: 'Renk',
+  productInfo: 'Ürün Bİlgileri',
+  rate: 'Değerlendirme',
+  appName: 'MAYZOR TEST CASE',
+  todaysFiveDiscounts: 'Bugünün 5 Fırsatı',
+  hurryUp: 'Fırsat süreleri ve stoklar bitiyor çabuk acele et.',
+  forgetPassword: 'Şifreni mi Unuttun',
+  productReviews: 'Ürün Değerlendirmeleri',
+};

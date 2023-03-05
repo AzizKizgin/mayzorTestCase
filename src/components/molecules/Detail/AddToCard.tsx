@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, HStack, Pressable, Text} from 'native-base';
 import {useProduct} from '../../../context/ProductContext';
+import {strings} from '../../../utils/strings';
 
 const AddToCard = () => {
   const {product} = useProduct();
@@ -37,7 +38,7 @@ const AddToCard = () => {
             borderRadius={'md'}
             alignItems={'center'}>
             <Text color={'white'} fontSize={'md'}>
-              Sepete Ekle
+              {strings.addToCart}
             </Text>
           </Box>
         </Pressable>

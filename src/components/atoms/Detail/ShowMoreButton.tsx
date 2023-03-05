@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Pressable, Text} from 'native-base';
 import {useProduct} from '../../../context/ProductContext';
+import {strings} from '../../../utils/strings';
 
 const ShowMoreButton = () => {
   const {product} = useProduct();
@@ -15,7 +16,7 @@ const ShowMoreButton = () => {
         borderBottomLeftRadius={'md'}
         borderBottomRightRadius={'md'}>
         <Text fontSize={'lg'} color={'white'}>
-          Tümünü Gör ({product.reviews.length})
+          {strings.seeAll} ({product.reviews.length})
         </Text>
       </Box>
     </Pressable>

@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import {Box, Text} from 'native-base';
 import {useProduct} from '../../../context/ProductContext';
+import {strings} from '../../../utils/strings';
 
 interface PriceButtonProps {
   type: 'mayzor' | 'market';
@@ -15,7 +16,7 @@ const PriceButton: FC<PriceButtonProps> = ({type}) => {
       backgroundColor={type === 'mayzor' ? 'purple' : 'background'}
       borderRadius={'md'}>
       <Text color={type === 'mayzor' ? 'white' : 'lightGray'} fontSize={'md'}>
-        {type === 'mayzor' ? 'Mayzor Fiyatı' : 'Piyasa Fiyatı'}
+        {type === 'mayzor' ? strings.mayzorPrice : strings.marketPrice}
       </Text>
       <Text
         textDecorationLine={type === 'mayzor' ? 'unset' : 'line-through'}

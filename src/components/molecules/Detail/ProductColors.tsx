@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Box, HStack, Pressable, Text} from 'native-base';
 import {COLORS, COLOR_NAMES} from '../../../utils/consts';
 import ColorBox from '../../atoms/Detail/ColorBox';
+import {strings} from '../../../utils/strings';
 
 const ProductColors = () => {
   const [selectedColor, setSelectedColor] = useState(0);
@@ -10,7 +11,7 @@ const ProductColors = () => {
       <Box>
         <Text color={'black'} fontSize={'sm'}>
           <Text color={'black'} fontSize={'sm'} fontWeight={'bold'}>
-            Renk:
+            {strings.color}:
           </Text>
           {' ' + COLOR_NAMES[COLORS[selectedColor].toString()]}
         </Text>

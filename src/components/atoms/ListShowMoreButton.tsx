@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Icon, Pressable, Text} from 'native-base';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {strings} from '../../utils/strings';
 
 const ListShowMoreButton = () => {
   return (
@@ -22,7 +23,7 @@ const ListShowMoreButton = () => {
           marginRight={'s'}
         />
         <Text color={'white'} fontSize={'md'}>
-          Tümünü Gör
+          {strings.seeAll}
         </Text>
       </Box>
     </Pressable>

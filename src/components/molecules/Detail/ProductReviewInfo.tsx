@@ -4,6 +4,7 @@ import {HStack} from 'native-base';
 import {useProduct} from '../../../context/ProductContext';
 import ProductInfo from '../../atoms/ProductInfo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {strings} from '../../../utils/strings';
 
 const ProductReviewInfo = () => {
   const {product} = useProduct();
@@ -28,7 +29,7 @@ const ProductReviewInfo = () => {
               size={5}
             />
             <Text fontSize={'sm'} color={'black'}>
-              {product.rate}/5 - {product.rateCount} Değerlendirme
+              {product.rate}/5 - {product.rateCount} {strings.rate}
             </Text>
           </HStack>
         </Box>

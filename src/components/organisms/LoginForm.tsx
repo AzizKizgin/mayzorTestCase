@@ -3,6 +3,7 @@ import {Box, Text, VStack} from 'native-base';
 import LoginInputs from '../molecules/LoginInputs';
 import LoginButton from '../atoms/LoginButton';
 import {useAuth} from '../../context/AuthContext';
+import {strings} from '../../utils/strings';
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -34,7 +35,7 @@ const LoginForm = () => {
         setIsButtonPressed={setIsPressed}
       />
       <Box>
-        <Text color={'black'}>Şifreni mi Unuttun</Text>
+        <Text color={'black'}>{strings.forgetPassword}</Text>
       </Box>
       <LoginButton onPress={onPress} />
     </VStack>

@@ -2,6 +2,7 @@ import React from 'react';
 import {Box, HStack, Icon, Text} from 'native-base';
 import Time from '../../atoms/Time';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {strings} from '../../../utils/strings';
 
 const DetailDiscountTime = () => {
   return (
@@ -20,7 +21,7 @@ const DetailDiscountTime = () => {
           size={'33'}
           color={'white'}
         />
-        <Text color={'white'}>Fırsat Süresi</Text>
+        <Text color={'white'}>{strings.discountTime}</Text>
         <HStack space={1}>
           <Time time={9} unit={'Saat'} size={'s'} />
           <Time time={23} unit={'Dakika'} size={'s'} />

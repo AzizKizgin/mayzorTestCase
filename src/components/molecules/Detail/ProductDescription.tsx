@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Text} from 'native-base';
 import {useProduct} from '../../../context/ProductContext';
+import {strings} from '../../../utils/strings';
 
 const ProductDescription = () => {
   const {product} = useProduct();
@@ -8,7 +9,7 @@ const ProductDescription = () => {
     <Box marginBottom={'m'}>
       <Box variant={'detail'}>
         <Text fontSize={'md'} color={'black'}>
-          Ürün Bİlgileri
+          {strings.productInfo}
         </Text>
       </Box>
       <Box variant={'detail'}>

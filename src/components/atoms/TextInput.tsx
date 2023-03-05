@@ -11,7 +11,6 @@ interface TextInputProps {
 const TextInput: FC<TextInputProps> = (props) => {
   const {placeholder, value, onChangeText, inputProps, secureTextEntry} = props;
   const [borderColor, setBorderColor] = useState('gray.200');
-  const [showPassword, setShowPassword] = useState(secureTextEntry);
   return (
     <Box
       width={'100%'}

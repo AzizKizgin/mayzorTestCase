@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Text} from 'native-base';
 import TodaysDiscountsIcon from '../atoms/TodaysDiscountsIcon';
+import {strings} from '../../utils/strings';
 
 const TodaysDiscountsInfo = () => {
   return (
@@ -15,10 +16,10 @@ const TodaysDiscountsInfo = () => {
       <TodaysDiscountsIcon />
       <Box marginLeft={'s'}>
         <Text fontSize={'sm'} color={'black'} bold>
-          Bugünün 5 Fırsatı
+          {strings.todaysFiveDiscounts}
         </Text>
         <Text fontSize={'sm'} color={'black'}>
-          Fırsat süreleri ve stoklar bitiyor çabuk acele et.
+          {strings.hurryUp}
         </Text>
       </Box>
     </Box>

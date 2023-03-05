@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Icon, Text} from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {strings} from '../../utils/strings';
 
 const ProductTop = () => {
   return (
@@ -14,7 +15,7 @@ const ProductTop = () => {
         <Icon as={Ionicons} name={'arrow-down'} color={'white'} size={'3'} />
       </Box>
       <Text color={'purple'} marginLeft={'xs'} bold fontSize={'xs'}>
-        Super Fiyat
+        {strings.superPrice}
       </Text>
     </Box>
   );

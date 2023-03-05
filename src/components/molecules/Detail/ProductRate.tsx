@@ -2,6 +2,7 @@ import React from 'react';
 import {Box, Icon, Text, HStack} from 'native-base';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useProduct} from '../../../context/ProductContext';
+import {strings} from '../../../utils/strings';
 
 const ProductRate = () => {
   const {product} = useProduct();
@@ -28,7 +29,7 @@ const ProductRate = () => {
           </Text>
         </HStack>
         <Text color={'gray.500'} fontSize={'sm'}>
-          {product.rateCount} Değerlendirme
+          {product.rateCount} {strings.rate}
         </Text>
       </Box>
     </Box>

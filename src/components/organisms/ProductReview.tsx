@@ -4,6 +4,7 @@ import ProductReviewInfo from '../molecules/Detail/ProductReviewInfo';
 import {useProduct} from '../../context/ProductContext';
 import ProductUserReview from '../molecules/Detail/ProductUserReview';
 import ShowMoreButton from '../atoms/Detail/ShowMoreButton';
+import {strings} from '../../utils/strings';
 
 const ProductReview = () => {
   const {product} = useProduct();
@@ -11,7 +12,7 @@ const ProductReview = () => {
     <Box marginBottom={'m'}>
       <Box variant={'detail'}>
         <Text fontSize={'md'} color={'black'}>
-          Ürün Değerlendirmeleri
+          {strings.productReviews}
         </Text>
       </Box>
       <ProductReviewInfo />
