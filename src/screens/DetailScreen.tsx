@@ -3,6 +3,8 @@ import {Box, ScrollView, VStack} from 'native-base';
 import DetailImage from '../components/organisms/DetailImage';
 import {ProductProvider} from '../context/ProductContext';
 import DetailProductOptions from '../components/organisms/DetailProductOptions';
+import ProductDescription from '../components/molecules/Detail/ProductDescription';
+import ProductReview from '../components/organisms/ProductReview';
 
 const data: {
   products: Product[];
@@ -16,6 +18,8 @@ const DetailScreen = () => {
           <DetailImage />
           <Box flex={1} paddingX={'l'}>
             <DetailProductOptions />
+            <ProductDescription />
+            <ProductReview />
           </Box>
         </ScrollView>
       </Box>
