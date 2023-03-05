@@ -18,7 +18,7 @@ const PriceButton: FC<PriceButtonProps> = ({type}) => {
         {type === 'mayzor' ? 'Mayzor Fiyatı' : 'Piyasa Fiyatı'}
       </Text>
       <Text
-        textDecorationLine={'line-through'}
+        textDecorationLine={type === 'mayzor' ? 'unset' : 'line-through'}
         color={'lightGray'}
         fontSize={'xl'}
         fontWeight={type === 'mayzor' ? 'extrabold' : 'normal'}>
