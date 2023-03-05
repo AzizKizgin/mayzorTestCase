@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Box, Image, ScrollView, Text, VStack} from 'native-base';
 import {SCREEN_HEIGHT, SCREEN_WIDTH} from '../../utils/consts';
 import DetailImageBottom from '../molecules/DetailImageBottom';
@@ -11,6 +11,7 @@ const data = [1, 2, 3, 4, 5];
 const DetailImage = () => {
   const {product} = useProduct();
   const navigation = useNavigation();
+  const [imageIndex, setImageIndex] = useState(0);
   const goBack = () => {
     navigation.goBack();
   };
@@ -19,7 +20,12 @@ const DetailImage = () => {
       <ScrollView
         horizontal
         pagingEnabled
-        showsHorizontalScrollIndicator={false}>
+        showsHorizontalScrollIndicator={false}
+        onScroll={(e) => {
+          const {x} = e.nativeEvent.contentOffset;
+          const index = Math.round(x / SCREEN_WIDTH);
+          setImageIndex(index);
+        }}>
         {data.map((item, index) => {
           return (
             <Box key={index}>
@@ -38,7 +44,7 @@ const DetailImage = () => {
           );
         })}
       </ScrollView>
-      <DetailImageBottom imageIndex={0} />
+      <DetailImageBottom imageIndex={imageIndex} />
       <Box position={'absolute'} top={21} left={21}>
         <IconButton iconName="chevron-left" iconSize={27} onPress={goBack} />
       </Box>
