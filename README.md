@@ -4,6 +4,11 @@
 
 Android için projeyi klonlayıp yarn ile kütüphaneleri indirmeniz yeterli. Windows kullandığım için bu kütüphanlerin kurulumlarını ios için yapmadım.
 
+Reanimated kütüphanesi yüzünde bir hata çıkarsa
+yarn start --reset-cache
+npm start -- --reset-cache
+komutları kullanılmalıdır.
+
 ## Kullandığım Kütüphaneler
 
 ```json
